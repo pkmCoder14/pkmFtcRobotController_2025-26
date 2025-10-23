@@ -126,7 +126,6 @@ public class FTCOnBotRoboAvengersTeleOp extends LinearOpMode
         double rotate;
         double max;
 
-
         /* Define and Initialize Motors */
         leftFrontDrive  = hardwareMap.dcMotor.get("frontLeftMotor");
         leftBackDrive   = hardwareMap.dcMotor.get("backLeftMotor");
@@ -148,6 +147,7 @@ public class FTCOnBotRoboAvengersTeleOp extends LinearOpMode
         leftBackDrive.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         rightBackDrive.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         armMotor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+
 
         /*This sets the maximum current that the control hub will apply to the arm before throwing a flag */
         ((DcMotorEx) armMotor).setCurrentAlert(5,CurrentUnit.AMPS);
